@@ -1,38 +1,33 @@
-#include <iostream>
-
-int main() {
-    int array[11], n, x; // Use size 11 to accommodate the new element
-
-    std::cout << "Enter the number of elements: ";
-    std::cin >> n;
-
-    if(n > 10) {
-        std::cout << "Error: Max 10 elements allowed.\n";
-        return 1;
+#include<iostream>
+int main(){
+    
+    //block-1
+    int array[11], n, x; //declaring the datatypes
+    std::cout<<"Enter the value of your array: ";
+    std::cin>>n;
+    
+    if(n>11){
+        std::cout<<"your array limitation is 11";
+        return true;
     }
-
-    std::cout << "Enter the elements of the array: ";
-    for(int i = 0; i < n; i++) {
-        std::cin >> array[i];
+    //block-2
+    std::cout<<"enter the elements: ";
+    for(int i = 0; i<n;i++){
+        std::cin>>array[i];
     }
-
-    std::cout << "Enter a value to insert at the beginning: ";
-    std::cin >> x;
-
-    // Shift elements to the right
-    for(int i = n; i > 0; i--) {
-        array[i] = array[i - 1];
+    //block-3
+    std::cout<<"enter a value in the beginning: ";
+    std::cin>>x;
+    for(int i=n;i>0;i--){
+        array[i]=array[i-1];
     }
-
-    // Insert at the beginning
-    array[0] = x;
+    array[0]=x;
     n++;
-
-    std::cout << "Array after insertion: ";
-    for(int i = 0; i < n; i++) {
-        std::cout << array[i] << " ";
+    
+    //block-4
+    std::cout<<"after the insertion the elements are: ";
+    for(int i=0;i<n;i++){
+        std::cout<<array[i]<< " ";
     }
-    std::cout << std::endl;
-
-    return 0;
+   
 }
